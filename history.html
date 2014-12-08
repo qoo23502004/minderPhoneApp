@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>歡迎蒞臨明德新村網頁</title>
+    
+    <script src="phonegap.js"></script>
+    
+    <div id="titleName"><img src="minder.jpg" alt=""></div>
+    
+    
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<div class="example">
+    <div class="menu">
+        <span>
+            <ul id="nav">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="#">歷史館</a>
+                    <div class="subs">
+                        <div>
+                            <ul>
+                                <li><h3>List</h3>
+                                    <ul>
+                                        <li><a href="#">綠色隧道</a></li>
+                                        <li><a href="#">四海一家</a></li>
+                                        <li><a href="#">戰壕</a></li>
+
+                                    </ul>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">影片</a>
+                    <div class="subs">
+                        <div>
+                            <ul>
+                                <li><h3>Submenu #1</h3>
+                                    <ul>
+                                        <li><a href="#">Link 1</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><h3>Submenu #2</h3>
+                                    <ul>
+                                        <li><a href="#">Link 4</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><h3>Submenu #3</h3>
+                                    <ul>
+                                        <li><a href="#">Link 5</a></li>
+                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="http://tw.yahoo.com">Yahoo!</a></li>
+                <li><a href="http://www.google.com.tw">Google</a></li>
+            </ul>
+        </span>
+    </div>
+</div>
+
+<script type="text/javascript">
+jQuery(window).load(function() {
+
+    $("#nav > li > a").click(function () { // binding onclick
+        if ($(this).parent().hasClass('selected')) {
+            $("#nav .selected div div").slideUp(100); // hiding popups
+            $("#nav .selected").removeClass("selected");
+        } else {
+            $("#nav .selected div div").slideUp(100); // hiding popups
+            $("#nav .selected").removeClass("selected");
+
+            if ($(this).next(".subs").length) {
+                $(this).parent().addClass("selected"); // display popup
+                $(this).next(".subs").children().slideDown(200);
+            }
+        }
+    }); 
+
+});
+</script>    
+            
+                
+                        
+</head>
+
+<body background="background.jpg">
+    <div id="l1">明德新村西鄰海軍軍區中正路，東到「海平路」和「建業新村」相望，南至「海軍體育場」及「左營活動中心」，北與「合群新城」為鄰。全村52戶，面積約有二萬多坪，獨門獨院日式建築，是全台灣最高級的一處日遺眷舍。38年5月至43年7月海軍總部駐地左營期間，早期之海軍將領們（擔任艦隊海上作戰職務）皆曾居住於明德新村，故有「將軍村」之稱。</div>
+
+    <div id="l2">本園區現存日遺軍事建築尚有：</div>
+
+    <div id="l3">位於「明德賓館」北側海富路與海功路交叉的碉堡，兩個對外的射口尚成開放狀況並未堵塞。
+
+    昭和16年由日本駐台海軍新建造寬約3公尺，長約30多公尺的大型公用戰壕，村內散佈3座小型簡易混凝土防空洞。
+
+    園區北邊的國軍左營海軍總醫院曾是日本的「海軍病院」。這些事證也顯示日本人為其南侵行動所做的戰爭準備。
+
+    全園區道路規劃完整，原區東邊海富路主要是由「雨豆樹」（樹齡100年以上）構成的「左營綠色隧道」，園區西邊的海景街兩旁有著高大的樟樹，南邊實踐路則是日遺的游泳池、「中山堂」、「四海一家」、明德國小、立德國中、台灣豫劇隊等。高雄市政府於民國99年，依據文化資產保存法，將左營海軍明德、建業、合群眷村及其以南相關設施，登錄為景觀範圍並予公告：102年3月27日經國防部選定為眷村文化保存園區</div>
+
+
+
+
+
+ 
+    
+    
+</body>
+
+
+<footer id="footer">
+    <h1>修訂者:Johnson_Chang</h1>
+</footer>
+</html>
