@@ -5,94 +5,131 @@
     <title>歡迎蒞臨明德新村網頁</title>
     
     <script src="phonegap.js"></script>
+    <script src="setting/js/alertify.js"></script>
+    <script src="setting/js/alertify.min.js"></script>
+    <div id="titleName"><img src="Image/minder.jpg" alt=""></div>
     
-    <div id="titleName"><img src="minder.jpg" alt=""></div>
     
-    
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="setting/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="setting/css/alertify.core.css" />
+	<link rel="stylesheet" href="setting/css/alertify.default.css" id="toggleCSS" />  
+       
+        <style>
+    #mwt_mwt_slider_scroll
+{
+	top: 0;
+	left:-150px;
+	width:150px;	
+	position:fixed;
+	z-index:9999;
+}
+ 
+#mwt_slider_content{
+	background:#3c5a98;
+	text-align:left;
+	padding-top:10px;
+    font-size: auto;
+    font-weight: bolder;
+}
+ 
+#mwt_fb_tab {
+	position:absolute;
+	top:0px;
+	right:-24px;
+	width:24px;
+	background:#3c5a98;
+	color:#ffffff;
+	font-family:Arial, Helvetica, sans-serif;	
+	text-align:center;
+	padding:9px 0;
+ 
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomright:10px;
+	-webkit-border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:10px;	
+}
+#mwt_fb_tab span {
+	display:block;
+	height:12px;
+	padding:1px 0;
+	line-height:12px;
+	text-transform:uppercase;
+	font-size:12px;
+}
 
-<div class="example">
-    <div class="menu">
-        <span>
-            <ul id="nav">
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="#">歷史館</a>
-                    <div class="subs">
-                        <div>
-                            <ul>
-                                <li><h3>List</h3>
-                                    <ul>
-                                        <li><a href="#">綠色隧道</a></li>
-                                        <li><a href="#">四海一家</a></li>
-                                        <li><a href="#">戰壕</a></li>
-
-                                    </ul>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="#">影片</a>
-                    <div class="subs">
-                        <div>
-                            <ul>
-                                <li><h3>Submenu #1</h3>
-                                    <ul>
-                                        <li><a href="#">Link 1</a></li>
-
-                                    </ul>
-                                </li>
-                                <li><h3>Submenu #2</h3>
-                                    <ul>
-                                        <li><a href="#">Link 4</a></li>
-
-                                    </ul>
-                                </li>
-                                <li><h3>Submenu #3</h3>
-                                    <ul>
-                                        <li><a href="#">Link 5</a></li>
-                                        
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="http://tw.yahoo.com">Yahoo!</a></li>
-                <li><a href="http://www.google.com.tw">Google</a></li>
-            </ul>
-        </span>
-    </div>
-</div>
-
-<script type="text/javascript">
-jQuery(window).load(function() {
-
-    $("#nav > li > a").click(function () { // binding onclick
-        if ($(this).parent().hasClass('selected')) {
-            $("#nav .selected div div").slideUp(100); // hiding popups
-            $("#nav .selected").removeClass("selected");
-        } else {
-            $("#nav .selected div div").slideUp(100); // hiding popups
-            $("#nav .selected").removeClass("selected");
-
-            if ($(this).next(".subs").length) {
-                $(this).parent().addClass("selected"); // display popup
-                $(this).next(".subs").children().slideDown(200);
-            }
-        }
-    }); 
-
-});
-</script>    
-            
+    </style>       
                 
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+<script type='text/javascript'>
+$(function(){
+	var w = $("#mwt_slider_content").width();
+	$('#mwt_slider_content').css('height','auto'); //將區塊自動撐滿畫面高度
+ 
+	$("#mwt_fb_tab").mousedown(function(){ //滑鼠滑入時
+		if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+		{
+			$("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+		}
+	});
+ 
+ 
+	$("#mwt_slider_content").mouseup(function(){　//滑鼠離開後
+		$("#mwt_mwt_slider_scroll").animate( { left:'-'+w+'px' }, 600 ,'swing');	
+	});	
+});
+ 
+</script>
                         
+                                            
+                                                                                    
 </head>
 
-<body background="background.jpg">
-    <div id="l1">明德新村西鄰海軍軍區中正路，東到「海平路」和「建業新村」相望，南至「海軍體育場」及「左營活動中心」，北與「合群新城」為鄰。全村52戶，面積約有二萬多坪，獨門獨院日式建築，是全台灣最高級的一處日遺眷舍。38年5月至43年7月海軍總部駐地左營期間，早期之海軍將領們（擔任艦隊海上作戰職務）皆曾居住於明德新村，故有「將軍村」之稱。</div>
+<body background="Image/mainBackground/background.jpg" onload="alert4()">
+    
+    <script type="text/javascript">
+        
+    function alert1(){
+     alertify.alert('綠色隧道: 為於海軍體育場周邊，綠帶以高大的常綠喬木（雨豆樹、木麻黃、樟木等，許多樹齡皆在60年以上）為主，提供休閒舒適的微氣候，也使硬體設施與周遭環境更為協調。');    
+    }
+        
+    function alert2(){
+     alertify.alert('四海一家: 其此原是日本「水交社」（海軍軍官俱樂部 ，大戰時被美機炸毀，民國39年重建，外形似艦船向東航行的建築。西元1995年，被建築學者李乾朗教授評為「深具現代主義Cubism（立體派）精神之傑作。」');
+    }
+    function alert3(){
+     alertify.alert('戰壕: 左營是當時日軍在台最重要的海軍基地，明德新村（昭和16年建造）為日本海軍高階軍官居住，亦為美軍空中攻擊的目標。為避難所需，除每一巷道有小型防空洞外，特又建此大型防空戰壕，約可容200人。其用途係專為較高階軍官而設，惟從洞內有儲水池設備研判，以供戰時指揮所使用之可能性頗高。');
+    } 
+    function alert4(){
+     alertify.alert('點擊圖片或選單內的細項可查看詳細資訊');
+    }
+    </script>
+
+    
+    
+    
+    <div id="mwt_mwt_slider_scroll">
+		 <div id="mwt_fb_tab">
+		    <span>選</span>
+			<span> </span>
+			<span> </span>
+	        <span>單</span>
+			
+		</div>
+		<div id="mwt_slider_content">
+            <ul id="list1"><a href="index.html" id="list">＊首頁</a></ul>
+            <ul id="list2"><a href="history.html" id="list">＊歷史館</a>
+                <li id="his1" onclick="alert1()">綠色隧道</li><br>
+                <li id="his2" onclick="alert2()">四海一家</li><br>            
+                <li id="his3" onclick="alert3()">戰壕</li>
+            </ul>
+            <ul id="list3"><a href="#" id="list">＊名人館</a></ul>    
+            <ul id="list4"><a href="#" id="list">＊國科館</a></ul>
+            <br>
+		</div>
+		
+</div>
+    <div id="historyMain">
+    
+    <div id="l1">　　明德新村西鄰海軍軍區中正路，東到「海平路」和「建業新村」相望，南至「海軍體育場」及「左營活動中心」，北與「合群新城」為鄰。全村52戶，面積約有二萬多坪，獨門獨院日式建築，是全台灣最高級的一處日遺眷舍。38年5月至43年7月海軍總部駐地左營期間，早期之海軍將領們（擔任艦隊海上作戰職務）皆曾居住於明德新村，故有「將軍村」之稱。</div><br>
 
     <div id="l2">本園區現存日遺軍事建築尚有：</div>
 
@@ -104,17 +141,18 @@ jQuery(window).load(function() {
 
     全園區道路規劃完整，原區東邊海富路主要是由「雨豆樹」（樹齡100年以上）構成的「左營綠色隧道」，園區西邊的海景街兩旁有著高大的樟樹，南邊實踐路則是日遺的游泳池、「中山堂」、「四海一家」、明德國小、立德國中、台灣豫劇隊等。高雄市政府於民國99年，依據文化資產保存法，將左營海軍明德、建業、合群眷村及其以南相關設施，登錄為景觀範圍並予公告：102年3月27日經國防部選定為眷村文化保存園區</div>
 
-
-
-
-
+    
+    <div id="image"><img src="Image/historyImage/H2.jpg" alt="" width="250" height="250" onclick="alert1()">
+                    <img src="Image/historyImage/H3.jpg" alt="" width="250" height="250" onclick="alert2()">
+                    <img src="Image/historyImage/H4.jpg" alt="" width="250" height="250" onclick="alert3()">
+    
+    </div>
+    </div>
  
     
     
 </body>
 
 
-<footer id="footer">
-    <h1>修訂者:Johnson_Chang</h1>
-</footer>
+
 </html>

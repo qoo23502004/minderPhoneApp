@@ -7,22 +7,22 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>測試用APP</name>
+    <name>明德新村APP</name>
 
     <description>
-        利用phonegap將HTML5製作成手機APP測試. 
+        明德新村專屬APP 
     </description>
 
     <author href="https://build.phonegap.com" email="support@phonegap.com">
         Hardeep Shoker 
     </author>
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
     
     
-    <icon src="ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
-    <icon src="mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
-    <icon src="hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
-    <icon src="xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
+    <icon src="appIcon/ldpi.png" gap:platform="android" gap:qualifier="ldpi" />
+    <icon src="appIcon/mdpi.png" gap:platform="android" gap:qualifier="mdpi" />
+    <icon src="appIcon/hdpi.png" gap:platform="android" gap:qualifier="hdpi" />
+    <icon src="appIcon/xhdpi.png" gap:platform="android" gap:qualifier="xhdpi" />
     
     
     

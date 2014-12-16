@@ -1,0 +1,61 @@
+/* demo page styles */
+body {
+    
+    margin:0;
+    padding:0;
+    font-family:Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+    text-align: auto;
+    width: auto;
+    height: auto;
+}
+
+#title{
+    background-color:pink;
+    font-size: 20px;
+    color:#0060A6;
+    display:block;
+    text-align: center;   
+}
+
+#titleName{
+    background-color:yellow;
+    font-size: 20px;
+    color:#0060A6;
+    display:bolck;
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+ 
+
+
+#aboutMain{
+    text-align: center;
+}
+#list{
+color: red;
+background-color:lightblue;    
+display:block;
+width: auto;
+height: auto;
+}
+
+#historyMain{
+display:block;
+margin: 10px;
+
+}
+
+
+#block1{
+height: 30px;     /* 高度 30 */
+width: 30px;     /* 寬度 30*/
+//background-color: #6699FF;      /* 背景色 藍色*/
+//border: 2px dashed #003366;      /* 虛線邊框 2 像素 深藍色*/
+margin: 2px;      /* 四周邊界 2 像素 */
+margin-top: 20px;
+margin-bottom: -5px;    
+
+float:left;
+}
+
