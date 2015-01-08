@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Login</title>
+   <script src="setting/js/account.js"></script>
+   <script type="text/javascript">
+  
+  function Login(){     
+  var username=document.getElementById("user").value;    
+  var passwordValue=document.getElementById("pass").value;
+  
+  
+      
+  if(passwordValue==password && username==user){
+      alert("登入成功");
+      document.location.href="http://tw.yahoo.com";
+  }
+  
+  else{
+      alert("帳號或密碼錯誤!");
+  }
+      
+  }
+       
+  function cancle(){
+      document.location.href="index.html";
+  }
+       
+  </script>
+   
+   
+   
+    
+     <script src="phonegap.js"></script>
+  </head>
+
+<body>
+
+  帳號:<input id="user" type="text" placeholder="User Name" /><br><br> 
+  密碼:<input id="pass" type="password" placeholder="Password" /><br><br>   
+　　　<button type="button" onclick="Login()">登入</button>  　<button type="button" onclick="cancle()()">取消</button>
+</body>
+<footer id="footer">
+ 
+  </footer>
+</html>

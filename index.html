@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="setting/css/alertify.default.css" id="toggleCSS" />  
     <script src="setting/js/alertify.js"></script>
     <script src="setting/js/alertify.min.js"></script>
-    
-    
+    <script src="setting/js/marker.js"></script>
     <div id="titleName">明德新村</div><br><br>
     
     
@@ -101,7 +100,7 @@ $(function(){
                         
 </head>
 
-<body onload="getLocation()" background="Image/mainBackground/background.jpg">
+<body onload="getLocation();" background="Image/mainBackground/background.jpg">
 <br>
 <div id="container_buttons">
                    
@@ -118,30 +117,64 @@ $(function(){
     
 </div>
 <p id="demo"></p><br>
-
-<div><canvas id="canvas1" width="auto" height="25"></canvas></div>
- <script type="text/javascript">
  
+
+<div><canvas id="canvas" width="auto" height="25"></canvas></div>
+<script type="text/javascript">
+    // 取得canvas元素的DOM物件
+		var canvas = document.getElementById("canvas");
+		// 取得繪圖環境
+		var cx = canvas.getContext("2d");
+        cx.font='24px "Comic Sans MS"';
+		cx.strokeText("1-56->Imformation",5,20);
+
+    
+</script>
+
+
+
+<div><canvas id="canvas1" width="470" height="450"></canvas></div>
+ <script type="text/javascript"> 
+     
+       
+     function repeatOften(){
+       
         // 取得canvas元素的DOM物件
 		var canvas = document.getElementById("canvas1");
 		// 取得繪圖環境
-		var cx = canvas.getContext("2d");
-		cx.font='24px "Comic Sans MS"';
-		cx.strokeText("1-56->Imformation",5,20);  
+		var cx = canvas.getContext("2d"); 
+        
+        var myImage=new Image();
+     
+        myImage.onload=function(){
+            cx.clearRect(20,0,450,450);
+            cx.drawImage(myImage, 20, 0, canvas.width, canvas.height);
+            
+        }
+        
+        myImage.src="Image/minderMap.jpg";
+     requestAnimationFrame(repeatOften);
+     }
+     
+     
+     requestAnimationFrame(repeatOften); 
+        
+     
  </script>
-    
+
 
 
 <section>
+<div id="block1"><a class="a_demo_two" onclick="repeatOften();">Clear</a></div><br><br>
 <div id="block1"><a class="a_demo_two" onclick="home1();">01</a></div>
 <div id="block1"><a class="a_demo_two" onclick="home2();">02</a></div>
 <div id="block1"><a class="a_demo_two" onclick="home3();">03</a></div>
 <div id="block1"><a class="a_demo_two" onclick="home4();">04</a></div>
 
-<div id="block1"><a class="a_demo_two" onclick="">05</a></div>
-<div id="block1"><a class="a_demo_two" onclick="">06</a></div>
-<div id="block1"><a class="a_demo_two" onclick="">07</a></div>
-<div id="block1"><a class="a_demo_two" onclick="">08</a></div>
+<div id="block1"><a class="a_demo_two" onclick="home5()">05</a></div>
+<div id="block1"><a class="a_demo_two" onclick="home6()">06</a></div>
+<div id="block1"><a class="a_demo_two" onclick="home7()">07</a></div>
+<div id="block1"><a class="a_demo_two" onclick="home8()">08</a></div>
 
 <div id="block1"><a class="a_demo_two" onclick="">09</a></div>
 <div id="block1"><a class="a_demo_two" onclick="">10</a></div>
@@ -232,10 +265,10 @@ $(function(){
 			
 		</div>
 		<div id="mwt_slider_content">
-            <ul id="list1"><a href="index.html" id="list">＊首頁</a></ul>
-            <ul id="list2"><a href="history.html" id="list">＊歷史館</a></ul>
-            <ul id="list3"><a href="#" id="list">＊名人館</a></ul>    
-            <ul id="list4"><a href="#" id="list">＊國科館</a></ul>
+            <ul id="list1"><a href="index.html" id="list">首頁</a></ul>
+            <ul id="list2"><a href="http://qoo23502004.github.io/minderPhoneApp/history.html" id="list">歷史館</a></ul>
+            <ul id="list3"><a href="#" id="list">名人館</a></ul>    
+            <ul id="list4"><a href="#" id="list">國科館</a></ul>
             <br><br>
 		</div>
 		
